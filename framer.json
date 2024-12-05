@@ -6,6 +6,9 @@
     "editColor",
     "colorPicker",
     "editColor",
+    "colorPicker",
+    "colorEditing"
+=======
     "colorPicker"
   ],
   "icon": "/icon.svg"
