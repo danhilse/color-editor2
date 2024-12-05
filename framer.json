@@ -2,7 +2,12 @@
   "id": "d66531",
   "name": "Color Editor 2",
   "modes": [
-    "canvas"
+    "canvas",
+    "editColor",
+    "colorPicker",
+    "editColor",
+    "colorPicker",
+    "colorEditing"
   ],
   "icon": "/icon.svg"
 }
