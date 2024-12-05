@@ -1,4 +1,4 @@
-import { framer, CanvasNode } from "framer-plugin"
+import { framer, CanvasNode, supportsBackgroundColor, supportsBorderColor, supportsTextColor } from "framer-plugin"
 import { useState, useEffect } from "react"
 import "./App.css"
 
@@ -31,13 +31,13 @@ export function App() {
 
     const updateLayerColor = async (newColor: string) => {
         for (const node of selection) {
-            if (framer.supportsBackgroundColor(node)) {
+            if (supportsBackgroundColor(node)) {
                 await node.setAttributes({ backgroundColor: newColor })
             }
-            if (framer.supportsBorderColor(node)) {
+            if (supportsBorderColor(node)) {
                 await node.setAttributes({ borderColor: newColor })
             }
-            if (framer.supportsTextColor(node)) {
+            if (supportsTextColor(node)) {
                 await node.setAttributes({ textColor: newColor })
             }
         }
