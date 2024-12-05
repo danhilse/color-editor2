@@ -3,7 +3,10 @@
   "name": "Color Editor 2",
   "modes": [
     "canvas",
-    "editColor"
+    "editColor",
+    "colorPicker",
+    "editColor",
+    "colorPicker"
   ],
   "icon": "/icon.svg"
 }

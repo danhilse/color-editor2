@@ -23,13 +23,6 @@ export function App() {
     const layer = selection.length === 1 ? "layer" : "layers"
     const [color, setColor] = useState("#000000")
 
-    const handleAddSvg = async () => {
-        await framer.addSVG({
-            svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#999" d="M20 0v8h-8L4 0ZM4 8h8l8 8h-8v8l-8-8Z"/></svg>`,
-            name: "Logo.svg",
-        })
-    }
-
     const handleColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newColor = event.target.value
         setColor(newColor)
@@ -53,15 +46,8 @@ export function App() {
     return (
         <main>
             <p>
-                Welcome! Check out the{" "}
-                <a href="https://framer.com/developers/plugins/introduction" target="_blank">
-                    Docs
-                </a>{" "}
-                to start. You have {selection.length} {layer} selected.
+                You have {selection.length} {layer} selected.
             </p>
-            <button className="framer-button-primary" onClick={handleAddSvg}>
-                Insert Logo
-            </button>
             <input
                 type="color"
                 value={color}
